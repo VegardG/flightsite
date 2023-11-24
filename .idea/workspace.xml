@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aircraft-data-service/src/main/java/org/example/AircraftDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aircraft-data-service/src/main/java/org/example/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aircraft-data-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/FlightTrackingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/controller/FlightController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/model/FlightData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/service/FlightTrackerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-data-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-data-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-data-service/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-data-service/src/main/java/org/example/AircraftDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-data-service/src/main/java/org/example/AircraftDataApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-tracking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flight-tracking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/FlightTrackingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/FlightTrackingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/flight-tracking-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +62,12 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "6eff6d570bb75fec4ec724cfa77a537a",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,17 +78,17 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AircraftDataService">
-    <configuration name="AircraftDataService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.AircraftDataApplication">
+    <configuration name="AircraftDataApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="aircraft-data-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.AircraftDataService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.AircraftDataApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightTrackingService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="FlightTrackingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="flight-tracking-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.FlightTrackingService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.flighttrackingservice.FlightTrackingApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,6 +104,7 @@
       <updated>1700737878562</updated>
       <workItem from="1700737880179" duration="3461000" />
       <workItem from="1700745718186" duration="13128000" />
+      <workItem from="1700780792361" duration="11788000" />
     </task>
     <servers />
   </component>

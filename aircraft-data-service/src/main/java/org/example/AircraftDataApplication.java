@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AircraftDataService {
+public class AircraftDataApplication {
     public static void main(String[] args) {
 
-        SpringApplication.run(AircraftDataService.class, args);
+        SpringApplication.run(AircraftDataApplication.class, args);
     }
 }

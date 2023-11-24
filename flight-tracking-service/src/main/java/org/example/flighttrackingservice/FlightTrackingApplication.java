@@ -1,12 +1,12 @@
-package org.example;
+package org.example.flighttrackingservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FlightTrackingService {
+public class FlightTrackingApplication {
     public static void main(String[] args) {
 
-        SpringApplication.run(FlightTrackingService.class, args);
+        SpringApplication.run(FlightTrackingApplication.class, args);
     }
 }
