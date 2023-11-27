@@ -47,4 +47,18 @@ public class FlightTrackerService {
             return Collections.emptyList();
         }
     }
+
+    public List<FlightData> getAllFlights() {
+        String url = apiUrl +  "/flights?api_key=" + apiKey;
+        try {
+            String rawResponse = restTemplate.getForObject(url, String.class);
+
+            ApiResponse apiResponse = objectMapper.readValue(rawResponse, ApiResponse.class);
+            return apiResponse.getFlights();
+        } catch (Exception e) {
+            logger.error("Error getting flight data:", e.getMessage(), e);
+            return Collections.emptyList();
+        }
+    }
+
 }

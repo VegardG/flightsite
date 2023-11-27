@@ -5,17 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/ApiApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/config/WebConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/model/ApiResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/model/FlightData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/service/FlightTrackerService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/flightmap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/ApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/controller/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/service/FlightTrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/service/FlightTrackerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-tracking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/FlightTrackingApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/controller/HelloController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/model/FlightData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/service/FlightTrackerService.java" beforeDir="false" />
@@ -30,6 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -60,6 +70,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -134,7 +145,7 @@
       <workItem from="1700780792361" duration="12141000" />
       <workItem from="1700825580152" duration="6272000" />
       <workItem from="1700997984342" duration="1644000" />
-      <workItem from="1701085447365" duration="4436000" />
+      <workItem from="1701085447365" duration="18628000" />
     </task>
     <servers />
   </component>
@@ -146,7 +157,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

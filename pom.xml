@@ -54,5 +54,6 @@
     <modules>
         <module>aircraft-data-service</module>
         <module>api-service</module>
+        <module>flight-site-ui</module>
     </modules>
 </project>
