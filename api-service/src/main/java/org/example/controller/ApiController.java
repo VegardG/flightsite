@@ -1,5 +1,6 @@
 package org.example.flighttrackingservice.controller;
 
+import org.example.flighttrackingservice.model.ApiResponse;
 import org.example.flighttrackingservice.model.FlightData;
 import org.example.flighttrackingservice.service.FlightTrackerService;
 import org.springframework.http.ResponseEntity;
@@ -8,20 +9,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/flights")
-public class FlightController {
+public class ApiController {
     private final FlightTrackerService flightTrackerService;
 
-    public FlightController(FlightTrackerService flightTrackerService) {
+    public ApiController(FlightTrackerService flightTrackerService) {
         this.flightTrackerService = flightTrackerService;
     }
-@GetMapping("/{flightNumber}")
+    @GetMapping("/{flightNumber}")
     public ResponseEntity<?> getFlightInfo(@PathVariable String flightNumber) {
         try {
-            FlightData flightData = flightTrackerService.getFlightData(flightNumber);
-            if (flightData != null) {
-                return ResponseEntity.ok(flightData);
+            List<FlightData> flightDataList = flightTrackerService.getFlightData(flightNumber);
+            if (!flightDataList.isEmpty()) {
+                return ResponseEntity.ok(flightDataList);
             } else {
                 return ResponseEntity.notFound().build();
             }

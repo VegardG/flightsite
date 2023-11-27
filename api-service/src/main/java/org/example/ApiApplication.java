@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FlightTrackingApplication {
+public class ApiApplication {
     public static void main(String[] args) {
 
-        SpringApplication.run(FlightTrackingApplication.class, args);
+        SpringApplication.run(ApiApplication.class, args);
     }
 }

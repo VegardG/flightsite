@@ -53,6 +53,6 @@
 
     <modules>
         <module>aircraft-data-service</module>
-        <module>flight-tracking-service</module>
+        <module>api-service</module>
     </modules>
 </project>
