@@ -75,5 +75,11 @@ public class FlightData {
     @JsonProperty("type")
     private String type;
 
-    // Getters and Setters for all fields
+    public String getAircraftIcao() {
+        return aircraftIcao;
+    }
+
+    public void setAircraftModel(String aircraftIcao) {
+        this.aircraftIcao = aircraftIcao;
+    }
 }

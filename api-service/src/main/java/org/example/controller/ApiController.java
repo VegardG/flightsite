@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://http://localhost:63342")
+@CrossOrigin(origins = "http://localhost:63342")
 @RestController
 @RequestMapping("/flights")
 public class ApiController {
@@ -18,6 +18,7 @@ public class ApiController {
     public ApiController(FlightTrackerService flightTrackerService) {
         this.flightTrackerService = flightTrackerService;
     }
+
     @GetMapping("/{flightNumber}")
     public ResponseEntity<?> getFlightInfo(@PathVariable String flightNumber) {
         try {
@@ -33,9 +34,9 @@ public class ApiController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<?> getAllFlightInfo() {
+    public ResponseEntity<?> getAllFlightInfo(@RequestParam(required = false) List<String> models) {
         try {
-            List<FlightData> allFlightData = flightTrackerService.getAllFlights();
+            List<FlightData> allFlightData = flightTrackerService.getAllFlights(models);
             if (!allFlightData.isEmpty()) {
                 return ResponseEntity.ok(allFlightData);
             } else {

@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/model/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/model/FlightData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/flightmap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/ApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/service/FlightTrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/service/FlightTrackerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/FlightTrackingApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/controller/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/model/FlightData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/java/org/example/flighttrackingservice/service/FlightTrackerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-tracking-service/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +66,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
-    "spring.configuration.checksum": "6eff6d570bb75fec4ec724cfa77a537a",
+    "spring.configuration.checksum": "0a50ec946f0846854e431a5495d92f0c",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -146,6 +121,7 @@
       <workItem from="1700825580152" duration="6272000" />
       <workItem from="1700997984342" duration="1644000" />
       <workItem from="1701085447365" duration="18698000" />
+      <workItem from="1701128819345" duration="3285000" />
     </task>
     <servers />
   </component>

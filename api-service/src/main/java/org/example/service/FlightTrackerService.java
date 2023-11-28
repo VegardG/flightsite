@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -43,20 +44,31 @@ public class FlightTrackerService {
             ApiResponse apiResponse = objectMapper.readValue(rawResponse, ApiResponse.class);
             return apiResponse.getFlights();
         } catch (Exception e) {
-            logger.error("Error getting flight data:", e.getMessage(), e);
+            logger.error("Error getting flight data: {}", e.getMessage(), e);
             return Collections.emptyList();
         }
     }
 
-    public List<FlightData> getAllFlights() {
-        String url = apiUrl +  "/flights?api_key=" + apiKey;
+    public List<FlightData> getAllFlights(List<String> aircraftModel) {
+        String url = apiUrl + "/flights?api_key=" + apiKey;
         try {
             String rawResponse = restTemplate.getForObject(url, String.class);
-
             ApiResponse apiResponse = objectMapper.readValue(rawResponse, ApiResponse.class);
-            return apiResponse.getFlights();
+            List<FlightData> allFlights = apiResponse.getFlights();
+
+            if (aircraftModel != null && !aircraftModel.isEmpty()) {
+                List<FlightData> filteredFlights = allFlights.stream()
+                        .filter(flight -> aircraftModel.stream()
+                                .anyMatch(model -> flight.getAircraftIcao().contains(model)))
+                        .collect(Collectors.toList());
+                if (!filteredFlights.isEmpty()) {
+                    return filteredFlights;
+                }
+            }
+                return allFlights;
+
         } catch (Exception e) {
-            logger.error("Error getting flight data:", e.getMessage(), e);
+            logger.error("Error getting flight data: {}", e.getMessage(), e);
             return Collections.emptyList();
         }
     }
