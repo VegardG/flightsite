@@ -5,13 +5,13 @@
   <title>Flight Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="script.js" defer></script>
+  <script src="flightmapscript.js" defer></script>
 </head>
 <body>
 <div id="map" style="height: 400px;"></div>
 
-<select id="aircraftFilter">
-  <option value="">All Aircrafts</option>
+<label for="aircraftFilter"></label><select id="aircraftFilter">
+  <option value="">All Aircraft</option>
   <option value="A320">Airbus A320</option>
   <option value="B73">Boeing 737</option>
   <option value="B74">Boeing 747</option>
