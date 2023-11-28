@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchFlightDataAndDisplay(map);
 });
 
-function fetchFlightDataAndDisplay(map) {
+function fetchFlightDataAndDisplay(map, aircraftModel = '') {
     fetch('http://localhost:8081/flights/all')
         .then(response => response.json())
         .then(data => {
@@ -17,7 +17,8 @@ function fetchFlightDataAndDisplay(map) {
                         L.marker([dataPoint.lat, dataPoint.lng])
                             .addTo(map)
                             .bindPopup(
-                                'Flight: ' + (dataPoint.flightNumber || 'Unknown') +
+                                'Flight: ' + (dataPoint.flight_icao || 'Unknown') +
+                                '<br>Aircraft: ' + (dataPoint.aircraft_icao || 'N/A') +
                                 '<br>Altitude: ' + (dataPoint.alt || 'N/A') +
                                 '<br>Speed: ' + (dataPoint.speed || 'N/A')
                             );
@@ -27,7 +28,16 @@ function fetchFlightDataAndDisplay(map) {
         .catch(error => console.error('Could not fetch data: ', error));
 }
 
-map.on('moveend', function() {
+
+function clearMarkers(map){
+    map.eachLayer(function (layer) {
+        if (!!layer.toGeoJSON) {
+            map.removeLayer(layer);
+        }
+    });
+}
+
+/*map.on('moveend', function() {
     var bounds = map.getBounds();
     fetchFlightsInRange(map, bounds);
 });
@@ -41,4 +51,4 @@ function fetchFlightsInRange(map, bounds) {
             //
         })
         .catch(error => console.error('Could not get data: ', error))
-}
+}*/
