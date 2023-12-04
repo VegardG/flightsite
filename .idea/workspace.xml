@@ -5,23 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/737.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/777.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/787.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/a320.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/a350.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/a380.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/737.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/A320.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/a380.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/planeinfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/aircraftinfoscript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/planeinfoscript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aircraft-management-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aircraft-management-service/src/main/java/org/example/AircraftApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aircraft-management-service/src/main/java/org/example/Producer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/flightinfoscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/flightmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/flightmap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-data-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-data-service/src/main/java/org/example/AircraftDataApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/AircraftInfoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-data-service/src/main/java/org/example/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-data-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/737.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/737.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/A320.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/A320.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/a380.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/a380.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/planeinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/planeinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/aircraftinfoscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/aircraftinfoscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/planeinfoscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-management-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +32,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -102,10 +103,37 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AircraftDataApplication">
+  <component name="RunManager" selected="Application.Producer">
+    <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Producer" />
+      <module name="aircraft-management-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AircraftApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="aircraft-management-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.AircraftApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AircraftDataApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="aircraft-data-service" />
+      <module name="aircraft-info-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.AircraftDataApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AircraftInfoApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="aircraft-info-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.AircraftInfoApp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,6 +159,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Producer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -150,7 +183,8 @@
       <workItem from="1701172911116" duration="22145000" />
       <workItem from="1701206727315" duration="4235000" />
       <workItem from="1701265515350" duration="5633000" />
-      <workItem from="1701286887166" duration="5009000" />
+      <workItem from="1701286887166" duration="7720000" />
+      <workItem from="1701689492200" duration="9718000" />
     </task>
     <servers />
   </component>
