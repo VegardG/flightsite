@@ -1,10 +1,10 @@
 function fetchAircraftInfo(model) {
-    fetch(`http://localhost:8081/aircraft/info/${model}`) // Adjust the URL as needed
+    fetch('http://<service-url>/api/aircraft/737')
         .then(response => response.json())
         .then(data => {
-            displayAircraftInfo(data);
+            document.getElementById('aircraft-info').innerHTML = `Model: ${data.model}, Capacity: ${data.capacity}`;
         })
-        .catch(error => console.error('Error fetching aircraft info:', error));
+        .catch(error => console.error('Error fetching aircraft data:', error));
 }
 
 function displayAircraftInfo(data) {

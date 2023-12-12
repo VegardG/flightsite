@@ -7,3 +7,5 @@ Ny side som bruker filterene til å lage en liste over informasjon om fly som er
 som viser feks hvor flyet kom fra, skal til, høyde osv.
 
 Sted hvor man kan søke opp flightnumber og få info opp. Har allerede api call til det
+
+Scrollable live flights på aircraft information
