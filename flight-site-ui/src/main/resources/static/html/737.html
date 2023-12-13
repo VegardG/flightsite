@@ -6,14 +6,21 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <h1>737 information</h1>
-    <div id="aircraft-info"></div>
-    <h1>Current 737 flights in the air</h1>
-    <div id="flights-container"></div>
-    <script>const filterModel = 'B73';</script>
-    <script src="../javacript/flightinfoscript.js"></script>
-    <script>
-        fetchAircraftInfo('B73');
-    </script>
+<h1>737 information</h1>
+<div id="aircraft-info"></div>
+<h1>Current 737 flights in the air</h1>
+<div id="flights-container"></div>
+
+<script>const filterModel = 'B73';</script>
+<script src="../javacript/aircraftinfoscript.js"></script>
+<script src="../javacript/flightinfoscript.js"></script>
+
+<script>
+    try {
+        setInterval(() => fetchAircraftInfo(filterModel), 10000);
+    } catch (error) {
+        console.error(error.message);
+    }
+</script>
 </body>
 </html>
