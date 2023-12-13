@@ -14,7 +14,7 @@ public class AircraftInfoController {
     @GetMapping("/aircraft/{model}")
     public ResponseEntity<?> getAircraftInfo(@PathVariable String model) {
         try {
-            Path filePath = Paths.get("../aircraftData.json");
+            Path filePath = Paths.get("aircraft-info-service/src/main/java/org/example/aircraftData.json");
             String content = Files.readString(filePath);
 
             JSONObject aircraftData = new JSONObject(content);

@@ -16,7 +16,7 @@ public class Producer {
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
             sendMessage(channel, "B73", "read");
-            sendMessage(channel, "A320", "update", "Updated informaton about the Airbus A320");
+            sendMessage(channel, "B73", "update", "Updated informaton about the B737");
         }
     }
 

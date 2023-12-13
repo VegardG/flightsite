@@ -1,5 +1,5 @@
 function fetchAircraftInfo(model) {
-    fetch('http://localhost:8082/aircraft/${model}')
+    fetch(`http://localhost:8082/aircraft/${model}`)
         .then(response => response.json())
         .then(data => {
             displayAircraftInfo(data);
@@ -9,7 +9,7 @@ function fetchAircraftInfo(model) {
 
 function displayAircraftInfo(data) {
     const infoContainer = document.getElementById('aircraft-info');
-    infoContainer.innterHTML = `Info: ${data.info}`;
+    infoContainer.innerHTML = `Info: ${data.info}`;
 }
 
 function getCurrentModel() {
