@@ -10,14 +10,26 @@ public class Producer {
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost"); // Change this if your RabbitMQ server is on a different host
+        factory.setHost("localhost");
         try (Connection connection = factory.newConnection();
              Channel channel = connection.createChannel()) {
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-            String message = "Update Boeing 737 Information";
-            channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-            System.out.println(" [x] Sent '" + message + "'");
+
+            sendMessage(channel, "B73", "read");
+            sendMessage(channel, "A320", "update", "Updated informaton about the Airbus A320");
         }
+    }
+
+    public static void sendMessage(Channel channel, String model, String action) throws Exception {
+        String message = model + ":" + action;
+        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+        System.out.println(" [x] Sent '" + message + "'");
+    }
+
+    public static void sendMessage(Channel channel, String model, String action, String info) throws Exception {
+        String message = model + ":" + action + ":" + info;
+        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+        System.out.println(" [x] Sent '" + message + "'");
     }
 }
 

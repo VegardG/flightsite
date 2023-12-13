@@ -1,16 +1,26 @@
 function fetchAircraftInfo(model) {
-    fetch('http://<service-url>/api/aircraft/737')
+    fetch('http://localhost:8082/aircraft/${model}')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('aircraft-info').innerHTML = `Model: ${data.model}, Capacity: ${data.capacity}`;
+            displayAircraftInfo(data);
         })
         .catch(error => console.error('Error fetching aircraft data:', error));
 }
 
 function displayAircraftInfo(data) {
     const infoContainer = document.getElementById('aircraft-info');
-    // Populate infoContainer with data about the aircraft
+    infoContainer.innterHTML = `Info: ${data.info}`;
 }
 
-// Call this function periodically
-setInterval(() => fetchAircraftInfo('B73'), 10000); // Adjust the interval as needed
+function getCurrentModel() {
+    if (typeof filterModel !== 'undefined') {
+        return filterModel;
+    } else {
+        throw new Error("Model not defined on this page.");
+    }
+}
+try {
+    setInterval(() => fetchAircraftInfo(getCurrentModel()), 10000);
+} catch (error) {
+    console.error(error.message);
+}
