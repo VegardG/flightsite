@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.charset.StandardCharsets;
 import org.apache.commons.io.IOUtils;
+@CrossOrigin(origins = "http://localhost:63342")
 @RestController
 public class AircraftInfoController {
 

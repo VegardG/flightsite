@@ -9,7 +9,7 @@ function fetchAircraftInfo(model) {
 
 function displayAircraftInfo(data) {
     const infoContainer = document.getElementById('aircraft-info');
-    infoContainer.innerHTML = `Info: ${data.info}`;
+    infoContainer.innerHTML = `${data.info}`;
 }
 
 function getCurrentModel() {
@@ -20,7 +20,7 @@ function getCurrentModel() {
     }
 }
 try {
-    setInterval(() => fetchAircraftInfo(getCurrentModel()), 10000);
+    setInterval(() => fetchAircraftInfo(getCurrentModel()), 10000); //on 10 seconds atm for testing
 } catch (error) {
     console.error(error.message);
 }

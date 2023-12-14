@@ -16,11 +16,7 @@
 <script src="../javacript/flightinfoscript.js"></script>
 
 <script>
-    try {
-        setInterval(() => fetchAircraftInfo(filterModel), 10000);
-    } catch (error) {
-        console.error(error.message);
-    }
+    fetchAircraftInfo(filterModel);
 </script>
 </body>
 </html>

@@ -6,9 +6,17 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<h1>Current A380 flights in the air</h1>
-    <div id="flights-container"></div>
-    <script>var filterModel = 'A38'</script>
-    <script src="../javacript/flightinfoscript.js"></script>
+<h1>A380 Information</h1>
+<div id="aircraft-info"></div>
+<h1>Current 737 flights in the air</h1>
+<div id="flights-container"></div>
+
+<script>const filterModel = 'A38';</script>
+<script src="../javacript/aircraftinfoscript.js"></script>
+<script src="../javacript/flightinfoscript.js"></script>
+
+<script>
+    fetchAircraftInfo(filterModel);
+</script>
 </body>
 </html>

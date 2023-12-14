@@ -36,5 +36,3 @@ function displayFlights(data, filterModel) {
 function shouldDisplayAircraft(dataPoint, filterModel) {
     return dataPoint.aircraft_icao && dataPoint.aircraft_icao.includes(filterModel);
 }
-
-fetchAirCraftInfo('filterModel');
