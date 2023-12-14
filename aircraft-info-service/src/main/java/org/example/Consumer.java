@@ -2,7 +2,10 @@ package org.example;
 
 import com.rabbitmq.client.*;
 import org.json.JSONObject;
+import org.springframework.core.io.ClassPathResource;
+
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,6 +14,7 @@ import java.nio.file.Paths;
 public class Consumer {
 
     private final static String QUEUE_NAME = "aircraft_info";
+    private static JSONObject aircraftData;
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -34,10 +38,11 @@ public class Consumer {
 
     private static void handleUpdate() {
         try {
-            Path path = Paths.get("src/main/resources/aircraftData.json");
-            String content = Files.readString(path);
-            JSONObject aircraftData = new JSONObject(content);
-            System.out.println("Aircraft data updated: " + aircraftData.toString());
+            ClassPathResource resource = new ClassPathResource("aircraftData.json");
+            InputStream inputStream = resource.getInputStream();
+            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            aircraftData = new JSONObject(content);
+            System.out.println("Aircraft data updated: " + aircraftData);
         } catch (IOException e) {
             System.err.println("Error updating aircraft data: " + e.getMessage());
         }
