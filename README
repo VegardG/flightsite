@@ -3,9 +3,6 @@ Få gjort om de blå markørene for fly til flyikoner som roterer i forhold til 
 
 Få inn nytt filter som baserer seg på flyet produksjonselskap til kartet. Må bruke Flight Information API
 
-Ny side som bruker filterene til å lage en liste over informasjon om fly som er i lufta || godt i gang her
-som viser feks hvor flyet kom fra, skal til, høyde osv.
-
 Sted hvor man kan søke opp flightnumber og få info opp. Har allerede api call til det
 
 Scrollable live flights på aircraft information

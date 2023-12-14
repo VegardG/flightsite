@@ -15,12 +15,11 @@ public class Producer {
              Channel channel = connection.createChannel()) {
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
-            sendMessage(channel, "B73", "read");
-            sendMessage(channel, "B73", "update", "Updated informaton about the B737");
+            sendUpdateNotification(channel);
         }
     }
 
-    public static void sendMessage(Channel channel, String model, String action) throws Exception {
+    /*public static void sendMessage(Channel channel, String model, String action) throws Exception {
         String message = model + ":" + action;
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
         System.out.println(" [x] Sent '" + message + "'");
@@ -30,6 +29,12 @@ public class Producer {
         String message = model + ":" + action + ":" + info;
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
         System.out.println(" [x] Sent '" + message + "'");
+    }*/
+
+    public static void sendUpdateNotification(Channel channel) throws Exception {
+        String message = "updateOccurred";
+        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
+        System.out.println(" [x] Sent update notification: '" +  message + "'");
     }
 }
 
