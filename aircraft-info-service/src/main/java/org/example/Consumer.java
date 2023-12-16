@@ -15,7 +15,6 @@ import java.nio.file.Paths;
 public class Consumer {
 
     private final static String QUEUE_NAME = "aircraft_info";
-    private static JSONObject aircraftData;
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -44,7 +43,7 @@ public class Consumer {
             String content = new String(Files.readAllBytes(Paths.get(absolutePath)));
             //String filePath = "C:\\Users\\vegar\\Desktop\\Mikrotjenester\\flightsite\\aircraft-info-service\\data\\aircraftData.json";
             //String content = new String(Files.readAllBytes(Paths.get(filePath)));
-            aircraftData = new JSONObject(content);
+            JSONObject aircraftData = new JSONObject(content);
             System.out.println("Aircraft data updated: " + aircraftData);
         } catch (IOException e) {
             System.err.println("Error updating aircraft data: " + e.getMessage());

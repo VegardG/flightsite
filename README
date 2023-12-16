@@ -6,3 +6,5 @@ Få inn nytt filter som baserer seg på flyet produksjonselskap til kartet. Må 
 Sted hvor man kan søke opp flightnumber og få info opp. Har allerede api call til det
 
 Scrollable live flights på aircraft information
+
+sjekk hvor mange api calls igjen til flightlabs før levering
