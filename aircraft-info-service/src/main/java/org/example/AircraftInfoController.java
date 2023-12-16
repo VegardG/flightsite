@@ -1,5 +1,9 @@
 package org.example;
 
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.DeliverCallback;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,6 +37,7 @@ public class AircraftInfoController {
     static {
         // Initial load of aircraft data
         loadAircraftData();
+        setupListener();
     }
 
     private static void loadAircraftData() {
@@ -58,4 +63,26 @@ public class AircraftInfoController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    private static void setupListener() {
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("localhost");
+        try {
+            Connection connection = factory.newConnection();
+            Channel channel = connection.createChannel();
+
+            channel.queueDeclare("aircraft_update_queue", false, false, false, null);
+            DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+                String message = new String(delivery.getBody(), "UTF-8");
+                if ("updateOccurred".equals(message)) {
+                    loadAircraftData();
+                }
+            };
+            channel.basicConsume("aircraft_update_queue", true, deliverCallback, consumerTag -> {});
+        } catch (Exception e) {
+            logger.error("Error setting up listener", e);
+        }
+    }
 }
+
+

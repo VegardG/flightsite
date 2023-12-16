@@ -36,6 +36,18 @@ public class Consumer {
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {});
     }
 
+    public static void sendUpdateNotification() throws Exception {
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("localhost");
+        try (Connection connection = factory.newConnection();
+            Channel channel = connection.createChannel()) {
+            String message = "updateOccured";
+            channel.queueDeclare("aircraft_update_queue", false, false, false, null);
+            channel.basicPublish("", "aircraft_queue_update", null, message.getBytes());
+            System.out.println(" [x] Sent '" + message + "'");
+        }
+    }
+
     private static void handleUpdate() {
         try {
             File file = new File("aircraft-info-service/data/aircraftData.json");
@@ -45,8 +57,11 @@ public class Consumer {
             //String content = new String(Files.readAllBytes(Paths.get(filePath)));
             JSONObject aircraftData = new JSONObject(content);
             System.out.println("Aircraft data updated: " + aircraftData);
+            sendUpdateNotification();
         } catch (IOException e) {
             System.err.println("Error updating aircraft data: " + e.getMessage());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }
