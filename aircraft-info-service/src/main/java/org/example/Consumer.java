@@ -38,9 +38,8 @@ public class Consumer {
 
     private static void handleUpdate() {
         try {
-            ClassPathResource resource = new ClassPathResource("aircraftData.json");
-            InputStream inputStream = resource.getInputStream();
-            String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            String filePath = "aircraft-info-service/data/aircraftData.json"; // Update this path
+            String content = new String(Files.readAllBytes(Paths.get(filePath)));
             aircraftData = new JSONObject(content);
             System.out.println("Aircraft data updated: " + aircraftData);
         } catch (IOException e) {

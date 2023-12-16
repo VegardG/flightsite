@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/AircraftInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/AircraftInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/resources/aircraftData.json" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/resources/aircraftData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/resources/aircraftData.json" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/data/aircraftData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +82,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\aircraft-info-service\data" />
+      <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\aircraft-info-service\src\main\java\org\example\informationfile" />
       <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\aircraft-info-service\src\main\resources" />
       <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\flight-site-ui\src\main\resources\static\javacript" />
       <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\flight-site-ui\src\main\resources\static\html" />
@@ -182,7 +184,8 @@
       <workItem from="1702415127306" duration="1200000" />
       <workItem from="1702473057313" duration="8876000" />
       <workItem from="1702505597485" duration="2480000" />
-      <workItem from="1702558371127" duration="11824000" />
+      <workItem from="1702558371127" duration="12422000" />
+      <workItem from="1702726532580" duration="6361000" />
     </task>
     <servers />
   </component>

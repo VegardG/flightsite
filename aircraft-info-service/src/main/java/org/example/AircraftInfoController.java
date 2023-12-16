@@ -12,12 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
 import java.nio.charset.StandardCharsets;
-import org.apache.commons.io.IOUtils;
-@CrossOrigin(origins = "http://localhost:63342")
+import java.nio.file.Files;
+import java.nio.file.Paths;
+/*@CrossOrigin(origins = "http://localhost:63342")
 @RestController
 public class AircraftInfoController {
+
+    private static JSONObject aircraftData;
+
+    public static void updateAircraftData(JSONObject newData) {
+        aircraftData = newData;
+    }
 
     private static final Logger logger = LoggerFactory.getLogger(AircraftInfoController.class);
     @GetMapping("/aircraft/{model}")
@@ -40,6 +46,45 @@ public class AircraftInfoController {
         } catch (IOException e) {
             logger.error("Error reading aircraft data file", e);
             return ResponseEntity.internalServerError().build();
+        }
+    }
+}*/
+
+@CrossOrigin(origins = "http://localhost:63342")
+@RestController
+public class AircraftInfoController {
+
+    private static final Logger logger = LoggerFactory.getLogger(AircraftInfoController.class);
+    private static JSONObject aircraftData;
+
+    // Static method to update aircraft data
+    public static void updateAircraftData(JSONObject newData) {
+        aircraftData = newData;
+    }
+
+    static {
+        // Initial load of aircraft data
+        loadAircraftData();
+    }
+
+    private static void loadAircraftData() {
+        String filePath = "aircraft-info-service/data/aircraftData.json";
+        try {
+            String content = Files.readString(Paths.get(filePath));
+            aircraftData = new JSONObject(content);
+            logger.info("Loaded aircraft data: {}", aircraftData.toString());
+        } catch (IOException e) {
+            logger.error("Error loading aircraft data", e);
+        }
+    }
+
+    @GetMapping("/aircraft/{model}")
+    public ResponseEntity<?> getAircraftInfo(@PathVariable String model) {
+        if (aircraftData != null && aircraftData.has(model)) {
+            return ResponseEntity.ok(aircraftData.getJSONObject(model).toString());
+        } else {
+            logger.warn("Model {} not found in aircraft data", model);
+            return ResponseEntity.notFound().build();
         }
     }
 }
