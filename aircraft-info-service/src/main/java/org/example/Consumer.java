@@ -4,6 +4,7 @@ import com.rabbitmq.client.*;
 import org.json.JSONObject;
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -38,8 +39,11 @@ public class Consumer {
 
     private static void handleUpdate() {
         try {
-            String filePath = "aircraft-info-service/data/aircraftData.json"; // Update this path
-            String content = new String(Files.readAllBytes(Paths.get(filePath)));
+            File file = new File("aircraft-info-service/data/aircraftData.json");
+            String absolutePath = file.getAbsolutePath();
+            String content = new String(Files.readAllBytes(Paths.get(absolutePath)));
+            //String filePath = "C:\\Users\\vegar\\Desktop\\Mikrotjenester\\flightsite\\aircraft-info-service\\data\\aircraftData.json";
+            //String content = new String(Files.readAllBytes(Paths.get(filePath)));
             aircraftData = new JSONObject(content);
             System.out.println("Aircraft data updated: " + aircraftData);
         } catch (IOException e) {

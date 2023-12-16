@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -68,10 +69,13 @@ public class AircraftInfoController {
     }
 
     private static void loadAircraftData() {
-        String filePath = "aircraft-info-service/data/aircraftData.json";
+        //String filePath = "C:\\Users\\vegar\\Desktop\\Mikrotjenester\\flightsite\\aircraft-info-service\\data\\aircraftData.json";
         try {
-            String content = Files.readString(Paths.get(filePath));
-            aircraftData = new JSONObject(content);
+            File file = new File("aircraft-info-service/data/aircraftData.json");
+            String absolutePath = file.getAbsolutePath();
+            String content = new String(Files.readAllBytes(Paths.get(absolutePath)));
+            //String content = Files.readString(Paths.get(filePath));
+            //aircraftData = new JSONObject(content);
             logger.info("Loaded aircraft data: {}", aircraftData.toString());
         } catch (IOException e) {
             logger.error("Error loading aircraft data", e);
