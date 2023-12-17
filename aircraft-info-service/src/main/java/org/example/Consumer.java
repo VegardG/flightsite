@@ -18,7 +18,8 @@ public class Consumer {
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost");
+        String rabbitMqHost = System.getenv("RABBITMQ_HOST");
+        factory.setHost(rabbitMqHost != null ? rabbitMqHost : "localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
 
@@ -38,7 +39,8 @@ public class Consumer {
 
     public static void sendUpdateNotification() throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost");
+        String rabbitMqHost = System.getenv("RABBITMQ_HOST");
+        factory.setHost(rabbitMqHost != null ? rabbitMqHost : "localhost");
         try (Connection connection = factory.newConnection();
             Channel channel = connection.createChannel()) {
             String message = "updateOccured";

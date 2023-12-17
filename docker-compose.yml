@@ -1,15 +1,18 @@
-version: '3'
+version: '2.2'
 services:
   aircraft-info-service:
     build: ./aircraft-info-service
     ports:
       - "8082:8080"
-
+    environment:
+      - RABBITMQ_HOST=rabbitmq
 
   aircraft-management-service:
     build: ./aircraft-management-service
     ports:
       - "8083:8080"
+    environment:
+      - RABBITMQ_HOST=rabbitmq
 
   api-service:
     build: ./api-service
@@ -20,3 +23,9 @@ services:
     build: ./flight-site-ui
     ports:
       - "80:80"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"

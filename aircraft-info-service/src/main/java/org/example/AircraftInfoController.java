@@ -66,7 +66,8 @@ public class AircraftInfoController {
 
     private static void setupListener() {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost");
+        String rabbitMqHost = System.getenv("RABBITMQ_HOST");
+        factory.setHost(rabbitMqHost != null ? rabbitMqHost : "localhost");
         try {
             Connection connection = factory.newConnection();
             Channel channel = connection.createChannel();

@@ -10,7 +10,8 @@ public class Producer {
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost");
+        String rabbitMqHost = System.getenv("RABBITMQ_HOST");
+        factory.setHost(rabbitMqHost != null ? rabbitMqHost : "localhost");
         try (Connection connection = factory.newConnection();
              Channel channel = connection.createChannel()) {
             channel.queueDeclare(QUEUE_NAME, false, false, false, null);
