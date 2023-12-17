@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function fetchAndDisplayCurrentFlights(filterModel) {
-    fetch('http://localhost:8081/flights/all')
+    fetch('http://api-service:8080/flights/all')
         .then(response => response.json())
         .then(data=> {
             displayFlights(data, filterModel);

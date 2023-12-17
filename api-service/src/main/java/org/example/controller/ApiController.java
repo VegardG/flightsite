@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:63342")
+@CrossOrigin(origins = "http://localhost")
 @RestController
 @RequestMapping("/flights")
 public class ApiController {

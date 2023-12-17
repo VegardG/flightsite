@@ -22,7 +22,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 
-@CrossOrigin(origins = "http://localhost:63342")
+@CrossOrigin(origins = "http://localhost")
 @RestController
 public class AircraftInfoController {
 

@@ -8,7 +8,7 @@
 }*/
 
 function fetchAircraftInfo(model) {
-    fetch(`http://localhost:8082/aircraft/${model}`)
+    fetch(`http://aircraft-info-service:8080/aircraft/${model}`)
         .then(response => response.json())
         .then(data => {
             try {
