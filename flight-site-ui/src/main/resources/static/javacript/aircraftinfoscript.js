@@ -1,13 +1,7 @@
-/*function fetchAircraftInfo(model) {
-    fetch(`http://localhost:8082/aircraft/${model}`)
-        .then(response => response.json())
-        .then(data => {
-            displayAircraftInfo(data);
-        })
-        .catch(error => console.error('Error fetching aircraft data:', error));
-}*/
 
 function fetchAircraftInfo(model) {
+    console.log("Fetching aircraft information", model);
+
     fetch(`http://localhost:8082/aircraft/${model}`)
         .then(response => response.json())
         .then(data => {
@@ -17,7 +11,10 @@ function fetchAircraftInfo(model) {
                 console.error('Error in handling fetch success:', error);
             }
         })
-        .catch(error => console.error('Error fetching aircraft data:', error));
+        .catch(error => console.error('Error fetching aircraft data:', error))
+        .finally(() => {
+            setTimeout(() => fetchAircraftInfo(model), 10000);
+    })
 }
 
 function displayAircraftInfo(data) {
@@ -32,16 +29,5 @@ function getCurrentModel() {
         throw new Error("Model not defined on this page.");
     }
 }
-/*try {
-    setInterval(() => fetchAircraftInfo(getCurrentModel()), 10000); //on 10 seconds atm for testing
-} catch (error) {
-    console.error(error.message);
-}*/
 
-function startFetchInterval() {
-    setInterval(function() {
-        fetchAircraftInfo(getCurrentModel());
-    }, 10000)
-}
-
-startFetchInterval();
+fetchAircraftInfo(getCurrentModel());

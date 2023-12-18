@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -41,7 +39,6 @@ public class AircraftInfoController {
     }
 
     private static void loadAircraftData() {
-        //String filePath = "C:\\Users\\vegar\\Desktop\\Mikrotjenester\\flightsite\\aircraft-info-service\\data\\aircraftData.json";
         try {
             File file = new File("data/aircraftData.json");
             String absolutePath = file.getAbsolutePath();

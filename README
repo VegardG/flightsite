@@ -8,3 +8,10 @@ Sted hvor man kan søke opp flightnumber og få info opp. Har allerede api call 
 Scrollable live flights på aircraft information
 
 sjekk hvor mange api calls igjen til flightlabs før levering
+
+
+
+rabbitmq må kjøre
+
+1 mvn clean install
+2 docker-compose --build

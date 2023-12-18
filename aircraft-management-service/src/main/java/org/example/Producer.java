@@ -20,17 +20,6 @@ public class Producer {
         }
     }
 
-    /*public static void sendMessage(Channel channel, String model, String action) throws Exception {
-        String message = model + ":" + action;
-        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-        System.out.println(" [x] Sent '" + message + "'");
-    }
-
-    public static void sendMessage(Channel channel, String model, String action, String info) throws Exception {
-        String message = model + ":" + action + ":" + info;
-        channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-        System.out.println(" [x] Sent '" + message + "'");
-    }*/
 
     public static void sendUpdateNotification(Channel channel) throws Exception {
         String message = "updateOccurred";

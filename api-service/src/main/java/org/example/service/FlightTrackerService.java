@@ -2,7 +2,6 @@ package org.example.flighttrackingservice.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.flighttrackingservice.model.ApiResponse;
-import org.example.flighttrackingservice.controller.ApiController;
 import org.example.flighttrackingservice.model.FlightData;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.List;
