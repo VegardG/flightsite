@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost")
-@RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/flights")
 public class ApiController {
     private final FlightTrackerService flightTrackerService;
@@ -46,19 +45,4 @@ public class ApiController {
             return ResponseEntity.internalServerError().body("Unable to get all flight data: " + e.getMessage());
         }
     }
-
-    /*@GetMapping("/bounds")
-    public ResponseEntity<?> getFlightsInRange(
-            @RequestParam double minLat,
-            @RequestParam double maxLat,
-            @RequestParam double minLng,
-            @RequestParam double maxLng) {
-        List<FlightData> flights = flightTrackerService.getFlightsInRange(minLat, maxLat, minLng, maxLng);
-        if (!flights.isEmpty()) {
-            return ResponseEntity.ok(flights);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }*/
-
 }

@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aircraft-info-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aircraft-info-service/data/aircraftData.json" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/data/aircraftData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/AircraftInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/AircraftInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-management-service/src/main/java/org/example/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-management-service/src/main/java/org/example/Producer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-site-ui/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/aircraftinfoscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/aircraftinfoscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/flightmapscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/flightmapscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/flightinfoscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/flightinfoscript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +192,7 @@
       <workItem from="1702505597485" duration="2480000" />
       <workItem from="1702558371127" duration="12422000" />
       <workItem from="1702726532580" duration="24096000" />
-      <workItem from="1702815405580" duration="17875000" />
+      <workItem from="1702815405580" duration="24524000" />
     </task>
     <servers />
   </component>

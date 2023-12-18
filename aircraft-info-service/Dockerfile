@@ -1,5 +1,7 @@
 FROM openjdk:17
 
+COPY data/aircraftData.json /data/aircraftData.json
+
 VOLUME /tmp
 
 EXPOSE 8082
