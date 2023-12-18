@@ -4,6 +4,13 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
+// Custom icon for plane marker
+const planeIcon = L.icon({
+    iconUrl: '../aircraftimages/airplanelogo.png',
+    iconSize: [38, 38],
+    iconAnchor: [19, 19]
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     fetchFlightDataAndDisplay(map);
 });
@@ -15,7 +22,8 @@ function fetchFlightDataAndDisplay(map, filterModel = '') {
             clearMarkers(map);
             data.forEach(function (dataPoint) {
                 if (shouldDisplayAircraft(dataPoint, filterModel)) {
-                    L.marker([dataPoint.lat, dataPoint.lng])
+                    const planeIcon = createRotatedIcon(dataPoint.dir);
+                    L.marker([dataPoint.lat, dataPoint.lng], { icon: planeIcon })
                         .addTo(map)
                         .bindPopup(
                             'Flight: ' + (dataPoint.flight_icao || 'Unknown') +
@@ -51,3 +59,15 @@ function clearMarkers(map) {
     });
 }
 
+function createRotatedIcon(heading) {
+    const iconHtml = '<div style="transform: rotate(' + heading + 'deg); width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;">' +
+        '<img src="../aircraftimages/airplanelogo.png" style="width: 100%; height: auto;"/>' +
+        '</div>';
+
+    return L.divIcon({
+        html: iconHtml,
+        iconSize: [20, 20],
+        iconAnchor: [10, 10],
+        className: ''
+    });
+}

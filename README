@@ -11,7 +11,10 @@ sjekk hvor mange api calls igjen til flightlabs før levering
 
 
 
-rabbitmq må kjøre
+rabbitmq må kjøre, docker må kjlre
 
 1 mvn clean install
 2 docker-compose --build
+
+
+flightmap veldig lag hvis ikke noe filter på

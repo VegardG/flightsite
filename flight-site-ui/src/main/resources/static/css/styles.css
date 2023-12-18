@@ -1,0 +1,69 @@
+.aircraft-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1000px;
+    padding: 20px;
+}
+
+.aircraft {
+    text-align: center;
+}
+
+.aircraft img {
+    width: 100%;
+    height: auto;
+}
+
+.flight-info {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.flight-info p {
+    margin: 5px 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+h1 {
+    margin: 20px 0;
+    font-family: helvetica, serif;
+}
+
+.links {
+    display: flex;
+    font-family: helvetica, serif;
+    font-size: 30px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.background {
+    position: absolute;
+    top: 120px;
+    left: 1%;
+    width: 98%;
+    height: calc(96% - 100px);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+#background1 {
+    opacity: 1;
+}

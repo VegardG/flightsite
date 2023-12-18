@@ -5,15 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da25fd90-919c-4ed5-b81c-5d1ee169a15a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/airplanelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/aircraftimages/bg9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/css/aircrafts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/css/flightmap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/css/planeinfo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/mainpage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aircraft-info-service/data/aircraftData.json" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/data/aircraftData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/AircraftInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/AircraftInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-info-service/src/main/java/org/example/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aircraft-management-service/src/main/java/org/example/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/aircraft-management-service/src/main/java/org/example/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-service/src/main/java/org/example/service/FlightTrackerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-service/src/main/java/org/example/service/FlightTrackerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/flightmapscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/flightmapscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/737.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/737.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/A320.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/A320.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/a380.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/a380.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/aircraftinfoscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/javacript/aircraftinfoscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/flightmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/flightmap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/planeinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/html/planeinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flight-site-ui/src/main/resources/static/styles.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +43,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="package.json" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -56,42 +77,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/vegar/Desktop/Mikrotjenester/flightsite/aircraft-data-service/src/main/java/org/example&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vegar/Desktop/Mikrotjenester/flightsite/api-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.ignored.files&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;bb3d4de98613adc0a82a93ac6c94aa72&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "19",
+    "last_directory_selection": "C:/Users/vegar/Desktop/Mikrotjenester/flightsite/aircraft-data-service/src/main/java/org/example",
+    "last_opened_file_path": "C:/Users/vegar/Desktop/Mikrotjenester/flightsite/api-service",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
+    "spring.configuration.checksum": "bb3d4de98613adc0a82a93ac6c94aa72",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\flight-site-ui\src\main\resources\static\javacript" />
+      <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\flight-site-ui\src\main\resources\static\css" />
       <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\aircraft-info-service\data" />
       <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\aircraft-info-service\src\main\java\org\example\informationfile" />
       <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\aircraft-info-service\src\main\resources" />
-      <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\flight-site-ui\src\main\resources\static\javacript" />
-      <recent name="C:\Users\vegar\Desktop\Mikrotjenester\flightsite\flight-site-ui\src\main\resources\static\html" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -101,7 +123,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Producer">
     <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Producer" />
       <module name="aircraft-management-service" />
@@ -191,7 +213,8 @@
       <workItem from="1702505597485" duration="2480000" />
       <workItem from="1702558371127" duration="12422000" />
       <workItem from="1702726532580" duration="24096000" />
-      <workItem from="1702815405580" duration="32888000" />
+      <workItem from="1702815405580" duration="32941000" />
+      <workItem from="1702920509765" duration="13337000" />
     </task>
     <servers />
   </component>
