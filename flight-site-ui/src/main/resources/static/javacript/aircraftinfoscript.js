@@ -2,6 +2,7 @@
 function fetchAircraftInfo(model) {
     console.log("Fetching aircraft information", model);
 
+    // API request to get data for a certain model
     fetch(`http://localhost:8082/aircraft/${model}`)
         .then(response => response.json())
         .then(data => {
@@ -17,11 +18,13 @@ function fetchAircraftInfo(model) {
     })
 }
 
+// Displays aircraft information in the UI
 function displayAircraftInfo(data) {
     const infoContainer = document.getElementById('aircraft-info');
     infoContainer.innerHTML = `${data.info}`;
 }
 
+// Gets the current model for the fetch request
 function getCurrentModel() {
     if (typeof filterModel !== 'undefined') {
         return filterModel;

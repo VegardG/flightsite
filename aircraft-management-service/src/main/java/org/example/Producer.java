@@ -4,7 +4,6 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
 
-
 public class Producer {
     private final static String QUEUE_NAME = "aircraft_info";
 
@@ -20,7 +19,7 @@ public class Producer {
         }
     }
 
-
+    // Sends message that an update has occurred
     public static void sendUpdateNotification(Channel channel) throws Exception {
         String message = "updateOccurred";
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes());

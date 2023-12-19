@@ -7,7 +7,6 @@ import com.rabbitmq.client.DeliverCallback;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,15 +34,16 @@ public class AircraftInfoController {
     static {
         // Initial load of aircraft data
         loadAircraftData();
+        // Sets up message queue listener
         setupListener();
     }
 
+    // Loads aircraft data from JSON file
     private static void loadAircraftData() {
         try {
             File file = new File("data/aircraftData.json");
             String absolutePath = file.getAbsolutePath();
             String content = new String(Files.readAllBytes(Paths.get(absolutePath)));
-            //String content = Files.readString(Paths.get(filePath));
             aircraftData = new JSONObject(content);
             logger.info("Loaded aircraft data: {}", aircraftData.toString());
         } catch (IOException e) {
@@ -51,6 +51,7 @@ public class AircraftInfoController {
         }
     }
 
+    // Endpoint to fetch information about an aircraft
     @GetMapping("/aircraft/{model}")
     public ResponseEntity<?> getAircraftInfo(@PathVariable String model) {
         if (aircraftData != null && aircraftData.has(model)) {
@@ -61,6 +62,7 @@ public class AircraftInfoController {
         }
     }
 
+    // Message queue listener
     private static void setupListener() {
         ConnectionFactory factory = new ConnectionFactory();
         String rabbitMqHost = System.getenv("RABBITMQ_HOST");
@@ -82,5 +84,3 @@ public class AircraftInfoController {
         }
     }
 }
-
-

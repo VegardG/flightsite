@@ -26,5 +26,4 @@
             <artifactId>amqp-client</artifactId>
         </dependency>
     </dependencies>
-
 </project>

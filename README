@@ -1,20 +1,98 @@
-Få kartsiden til å se bedre ut
-Få gjort om de blå markørene for fly til flyikoner som roterer i forhold til retningen til flyet
 
-Få inn nytt filter som baserer seg på flyet produksjonselskap til kartet. Må bruke Flight Information API
-
-Sted hvor man kan søke opp flightnumber og få info opp. Har allerede api call til det
-
-Scrollable live flights på aircraft information
 
 sjekk hvor mange api calls igjen til flightlabs før levering
 
 
+FLIGHTSITE
 
-rabbitmq må kjøre, docker må kjlre
+The project will be the creation of a web-based platform that will be useful to aviation
+enthusiasts, professional and casual travelers to access detailed information about different
+types of aircraft and can also monitor them in real-time. The website’s core feature would be
+information and live tracking for different types of aircraft models such as the Airbus A320,
+Boeing 737, Airbus A380s and more. Users will have the ability to filter live flights based on the
+aircraft model. The objective is to provide a user-friendly interface with real-time data and in-debt
+aircraft information with the help of the Airlabs API.
 
-1 mvn clean install
-2 docker-compose --build
+The website's main functions is the map that fetches data from the API and displays it real time,
+and the individual aircraft pages where you can see information about the aircraft itself, and all the flights
+that are currently in the air.
 
 
-flightmap veldig lag hvis ikke noe filter på
+Architecture overview:
+Diagram in image 'flightsitediagram.png' in project root
+
+Aircraft Info Service
+-Handles HTTP request for aircraft information
+-Provides a REST endpoint /aircraft/{model} that retrieves data bout a specific model.
+-It loads the data from the JSON file and updates it when receiving a message that indicates that an update has happened
+-Consumer that listens for messages on a RabbitMQ queue. When it receives a message indicating an update,
+ it reloads the data from the JSON file
+
+Aircraft Management Service
+-Has a Producer that sends messages to the RabbitMQ queue and is used to notify the info-service about updates in the data
+
+API Service
+-ApiController that provides REST endpoints for flight information. One to get data for a specific flight and to get data
+ for all current flights.
+-FlightTrackerService that handles logic for fetching data. Uses the Airlabs API
+
+Flight site UI
+-The user interface for the website that contains all html, javascript and css files
+-Use the endpoints to provide data to the site
+
+
+BUILD AND RUN
+
+Through docker:
+-Make sure rabbitmq is started
+-Make sure Docker is running
+-Navigate to the root directory /flightsite and execute the following commands:
+    mvn clean install
+    docker-compose up --build
+This should start the services:
+    aircraft-info-service, aircraft-management-service, api-service, rabbitmq and make the UI accessible
+-Go to localhost/html to access the flightsite
+
+To test the rabbitmq message system:
+-If the service isn't started via docker compose already go to flightsite/aircraft-info-service and run mvn spring-boot:run
+-Run the Consumer in aircraft-info-service
+-Go to aircraft-info-service/data/aircraftInfo.json
+-Edit something within any of the "info" fields
+-Go to aircraft-management-service/src/main/java/org.example/Producer
+-Same for this service if it's not already started by docker compose
+-Run the Producer
+-The consumer should receive an updateOccured message and update the Aircraft data
+This currently doesn't update the data on the html page unless you rerun the Consumer
+
+
+User stories:
+
+Be aware, the flight map is very slow when loading all aircraft, be patient when zooming in/out and panning.
+When using the filters it's fast and responsive
+
+-As an aviation enthusiast, I want to select an aircraft type, like the Airbus A320, and view
+ all its current live flights so that I can see the operations of my favorite aircraft live.
+
+-As an aircraft enthusiast, I see a plane high above me in the sky and want to check the type of aircraft and
+ altitude by going to the live map, find the plane and click on it to see the relevant information
+
+-As a fan of the gigantic airplane the A380, I want to go to its information page and check all A380s in the
+ air at this time.
+
+-As an airplane lover, I want to find my area on the map and see all flights around me.
+
+
+In the arbeidskrav I had these user stories also:
+-As a student pilot, I want to access detailed profiles of different aircraft types to learn
+ about their features, capabilities, and statistics to enhance my educational experience.
+
+ Right now there is only information about 3 different aircrafts on the Aircraft information page. I didn't want to
+ spend my time making plenty of detailed aircraft pages as this would only be copying info from other sources.
+ These 3 are there as examples and the information itself is there to show the services are working.
+
+-As a frequent flyer, I want to filter aircraft by manufacturers such as Airbus and Boeing
+ so that I can stay informed about the various aircraft made by my preferred
+ manufacturer.
+
+I didn't add this filter because it would just show the same knowledge as the filter for individual aircraft models.
+I rather spent my time in other parts of the project.

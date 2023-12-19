@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
 import org.slf4j.Logger;
 
 import java.util.Collections;
@@ -28,11 +27,13 @@ public class FlightTrackerService {
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
+    // Constructer for initializing RestTemplate and ObjectMapper
     public FlightTrackerService(RestTemplateBuilder restTemplateBuilder, ObjectMapper objectMapper) {
         this.restTemplate = restTemplateBuilder.build();
         this.objectMapper = objectMapper;
     }
 
+    // Gets information from the API based on the flight number
     public List<FlightData> getFlightData(String flightNumber) {
         String url = apiUrl +  "/flights?flight_icao=" + flightNumber + "&api_key=" + apiKey;
         try {
@@ -47,6 +48,7 @@ public class FlightTrackerService {
         }
     }
 
+    // Gets information about all flights that can be filtered by model
     public List<FlightData> getAllFlights(List<String> aircraftModel) {
         String url = apiUrl + "/flights?api_key=" + apiKey;
         try {

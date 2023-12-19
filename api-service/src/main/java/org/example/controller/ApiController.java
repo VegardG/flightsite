@@ -1,12 +1,10 @@
 package org.example.flighttrackingservice.controller;
 
-import org.example.flighttrackingservice.model.ApiResponse;
 import org.example.flighttrackingservice.model.FlightData;
 import org.example.flighttrackingservice.service.FlightTrackerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.CrossOrigin;
-
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost")
@@ -15,10 +13,12 @@ import java.util.List;
 public class ApiController {
     private final FlightTrackerService flightTrackerService;
 
+    // Constructer to initialize the FlightTrackerService
     public ApiController(FlightTrackerService flightTrackerService) {
         this.flightTrackerService = flightTrackerService;
     }
 
+    // Endpoint to get information about a flight using its flight number
     @GetMapping("/{flightNumber}")
     public ResponseEntity<?> getFlightInfo(@PathVariable String flightNumber) {
         try {
@@ -33,6 +33,7 @@ public class ApiController {
         }
     }
 
+    // Endpoint to get information about all flights, can be filtered by the model
     @GetMapping("/all")
     public ResponseEntity<?> getAllFlightInfo(@RequestParam(required = false) List<String> models) {
         try {

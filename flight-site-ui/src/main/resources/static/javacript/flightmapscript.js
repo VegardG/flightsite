@@ -1,20 +1,16 @@
-const map = L.map('map').setView([51.505, -0.09], 13);
+// Initializes the map at Oslo
+const map = L.map('map').setView([59.9, 10.7], 9);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-// Custom icon for plane marker
-const planeIcon = L.icon({
-    iconUrl: '../aircraftimages/airplanelogo.png',
-    iconSize: [38, 38],
-    iconAnchor: [19, 19]
-});
-
+// Event listener that fetches and displays flights on the map after DOM content is loaded
 document.addEventListener('DOMContentLoaded', function () {
     fetchFlightDataAndDisplay(map);
 });
 
+// Function to fetch the flights annd display the markers on the map
 function fetchFlightDataAndDisplay(map, filterModel = '') {
     fetch('http://localhost:8081/flights/all')
         .then(response => response.json())
@@ -37,10 +33,12 @@ function fetchFlightDataAndDisplay(map, filterModel = '') {
         .catch(error => console.error('Could not fetch data: ', error));
 }
 
+// Decides to display a flight based on the filter
 function shouldDisplayAircraft(dataPoint, filterModel) {
     return filterModel === '' || (dataPoint.aircraft_icao && dataPoint.aircraft_icao.includes(filterModel));
 }
 
+// Listens for a change in the filter and updates the map markers if needed
 document.addEventListener('DOMContentLoaded', function () {
     const aircraftFilter = document.getElementById('aircraftFilter');
 
@@ -51,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Clears all markers on the map
 function clearMarkers(map) {
     map.eachLayer(function (layer) {
         if (layer instanceof L.Marker) {
@@ -59,6 +58,7 @@ function clearMarkers(map) {
     });
 }
 
+// Custom icon for the flights on the map and rotates based on the heading
 function createRotatedIcon(heading) {
     const iconHtml = '<div style="transform: rotate(' + heading + 'deg); width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;">' +
         '<img src="../aircraftimages/airplanelogo.png" style="width: 100%; height: auto;"/>' +

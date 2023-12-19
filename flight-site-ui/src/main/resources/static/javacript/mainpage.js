@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var backgroundImages = [
+    const backgroundImages = [
         'url(../aircraftimages/bg1.jpg)',
         'url(../aircraftimages/bg2.jpg)',
         'url(../aircraftimages/bg3.jpg)',
@@ -16,15 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const background1 = document.getElementById('background1');
     const background2 = document.getElementById('background2');
 
-    // Preload images
+    // Preload images for nice transition
     backgroundImages.forEach(function(img) {
-        var image = new Image();
+        const image = new Image();
         image.src = img.slice(4, -1);
     });
 
+    // Function to change background image
     function changeBackground() {
         currentBackground = (currentBackground + 1) % backgroundImages.length;
 
+        // Alternate between two background elements for fade effect
         if (background1.style.opacity === '1') {
             background2.style.backgroundImage = backgroundImages[currentBackground];
             background1.style.opacity = '0';
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Change background every 5 sec and set background instantly on load
     setInterval(changeBackground, 5000);
     changeBackground();
 });

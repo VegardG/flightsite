@@ -2,7 +2,6 @@ package org.example;
 
 import com.rabbitmq.client.*;
 import org.json.JSONObject;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -15,6 +14,7 @@ public class Consumer {
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
+        // Connection to RabbitMQ
         String rabbitMqHost = System.getenv("RABBITMQ_HOST");
         factory.setHost(rabbitMqHost != null ? rabbitMqHost : "localhost");
         Connection connection = factory.newConnection();
@@ -23,6 +23,7 @@ public class Consumer {
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
+        // Function to handle messages received from queue
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
             System.out.println(" [x] Received '" + message + "'");
@@ -34,8 +35,7 @@ public class Consumer {
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {});
     }
 
-
-
+    // Handles update of the aircraft data when a message is received
     private static void handleUpdate() {
         try {
             File file = new File("aircraft-info-service/data/aircraftData.json");
